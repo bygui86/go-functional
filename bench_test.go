@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"testing"
 
-	. "go-functional/pipeline"
+	"go-functional/pipeline"
 )
 
 var result int // to prevent compiler optimization
@@ -23,7 +23,7 @@ func BenchmarkPipe(b *testing.B) {
 	})
 
 	b.Run("PowerPlusOnePipe", func(b *testing.B) {
-		pipe := Pipe(sqr, inc, sink)
+		pipe := pipeline.Pipe(sqr, inc, sink)
 		for n := 0; n < b.N; n++ {
 			pipe(x)
 		}

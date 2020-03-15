@@ -3,14 +3,14 @@ package main
 import (
 	"fmt"
 
-	. "go-functional/pipeline"
-	. "go-functional/quickAndDirty"
+	"go-functional/pipeline"
+	"go-functional/quickAndDirty"
 )
 
 func main() {
 	fmt.Println("*** Quick & dirty ***")
-	QuickAndDirty()
+	quickAndDirty.QuickAndDirty()
 
 	fmt.Println("*** Pipeline ***")
-	PossibleSolution()
+	pipeline.PossibleSolution()
 }
